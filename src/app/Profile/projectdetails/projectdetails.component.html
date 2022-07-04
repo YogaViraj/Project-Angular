@@ -1,0 +1,105 @@
+<app-topbar></app-topbar>
+<app-sidebar></app-sidebar>
+
+<div class="container d-flex justify-content-center table-box">
+  <form action="#" class="form" style="margin-top:110px;  width: 60%;border-radius: 15px; border:2px solid black; margin-bottom:5%;">
+    <!-- <h1 class="text-center">Registration Form</h1> -->
+    <!-- Progress bar -->
+    <div class="progressbar">
+      <div class="progress" id="progress"></div>
+
+      <div class="progress-step progress-step-active" data-title="Personal"></div>
+      <div class="progress-step progress-step-active" data-title="Education"></div>
+      <div class="progress-step progress-step-active" data-title="Project"></div>
+      <div class="progress-step" data-title="Skills"></div>
+      <div class="progress-step" data-title="Achievements"></div>
+    </div>
+
+    <div class="form-step form-step-active">
+      <h3>Project Details</h3>
+
+        <label for="Proname">Project Name</label>
+        <input type="text" [(ngModel)]="projectfield.projectname" name="projectname" id="Proname" placeholder="Enter Project name" style="border-color: black;"/>
+      <br>
+        <label for="Prodes">Project Description</label>
+        <textarea [(ngModel)]="projectfield.projectdescription" name="Description" id="Prodes" rows="4" cols="80" placeholder="Enter Project description" style=" width: 100%;border-color: black;"></textarea>
+     
+            <label for="personaldetails">Duration</label>
+          
+      <div>
+        <label for="personaldetails">StartingMonth</label>
+        <input type="text" [(ngModel)]="projectfield.startingMonth" name="Startmonth" id="personaldetails" style="border-color: black;"/>
+      </div>
+<br>
+      <label for="personaldetails">StaringYear</label>
+
+        <select [(ngModel)]="projectfield.startingYear" name="Startyear" required="" style="border-color: black;">
+
+          <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+
+        </select>
+<br>
+      <div>
+        <label for="personaldetails">EndingMonth</label>
+        <input type="text" [(ngModel)]="projectfield.endingMonth" name="Endmonth" id="personaldetails" style="border-color: black;"/>
+      </div>
+<br>
+      
+      <label for="personaldetails">EndingYear</label>
+
+        <select [(ngModel)]="projectfield.endingYear" name="Endyear" required="" style="border-color: black;">
+
+          <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+
+        </select>
+<br>
+        <label for="Role">Role Played</label>
+        <input type="text" name="Role" id="Role" [(ngModel)]="projectfield.designation" placeholder="Enter Role played"style="border-color: black;" />
+        <br>
+        <label for="Tools">Tools Used</label>
+        <input type="text" name="Tools" id="Tools" [(ngModel)]="projectfield.toolsused" placeholder="Enter Tools used"style="border-color: black;" />
+      
+      <div class="button">
+        <a (click)="Update()" class="btn btn-next width-50 ml-auto">Add</a>
+      </div>
+    
+      <!-- <div class="row"> -->
+        <!-- <div class="col">
+          <div class="kcard" *ngFor="let item of Projectdetails">
+            <div class="card card-body ">
+              <p class="card-text">Project Name: {{item.projectName}}<br>Project Description:
+                {{item.projectDescription}} <br> From: {{item.projectduration}}
+                <br> To:{{item.projectDuration}} <br> Role Played:{{item.role}} <br> Tools Used:
+                {{item.tools}}
+              </p>
+              <h2><a class="fa-solid fa-pen fa-sm"></a><i class="fa-solid fa-trash trash fa-sm"></i></h2>
+
+            </div>
+
+                        <div class="col">
+                            <div class="card card-body">
+                                <p class="card-text">Project Name : XXX<br>Project Description : YYY <br> From : 25 jan 2006
+                                    <br> To : 26 Apr 2006 <br> Role Played : ZZZ <br> Tools Used : WWW
+                                </p>
+                                <h2><a class="fa-solid fa-pen fa-sm"></a><i class="fa-solid fa-trash fa-sm"></i></h2>
+
+                            </div>
+                        </div>
+
+
+          </div> -->
+
+          <div class="row">
+            <a [routerLink]="['/personaldetails']" class="btn btn-next width-50 ml-auto">Previous</a>
+    
+            <a href="#" class="btn btn-next width-50 ml-auto">Save as Draft</a>
+    
+            <a [routerLink]="['/achievementdetails']" class="btn btn-next width-50 ml-auto">Submit&nbsp;</a>
+    
+          </div>
+          <br><br>
+        <!-- </div> -->
+      <!-- </div> -->
+    </div>
+  </form>
+</div>

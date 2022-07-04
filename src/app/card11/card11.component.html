@@ -1,0 +1,33 @@
+<app-topbar></app-topbar>
+<app-sidebar></app-sidebar>
+<script src="https://kit.fontawesome.com/968b7ca54c.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+<div class="container d-flex justify-content-center table-box">
+  <div class="main">
+    <div class="kcard" type="outlined"
+      *ngFor="let item of data | paginate: {itemsPerPage : 4, currentPage: page,totalItems:totalLength}">
+      <a  routerLink="['/hrprofile',item.userId]"><img class="card-img-top" src="./assets/img/profile.jpg"
+          alt="Card image cap"></a>
+      <div class="status">
+        <p>Status: </p>
+        <p class="card-text">Approved</p>
+      </div>
+      <div class="card-body">
+        <p class="card-text"><br>{{item.name}} - {{item.designation.designationName}}- {{item.userId}}<br>Reporting
+          Person-{{item.reportingPersonUsername}}</p>
+        <br>
+        <h2>
+          <i class="fa fa-pencil fa-sm"></i><i class=""></i>
+          <i (click)="CancelDrive(item.userId)" class="fa fa-trash"></i>
+
+          <!-- <i class="fa fa-trash"></i> -->
+        </h2>
+
+      </div>
+    </div>
+  </div>
+  <div class="mt-3 pagination">
+    <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>
+  </div>
+</div>

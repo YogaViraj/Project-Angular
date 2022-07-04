@@ -1,0 +1,142 @@
+<script src="https://kit.fontawesome.com/968b7ca54c.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<!-- <div class="container d-flex justify-content-center table-box"> -->
+    <div class="main">
+        <!-- code type here -->
+        <div class="search" >
+            <input type="text" name="search" placeholder="Search by Name, Project" style="background-color:#f5f5f5;">
+            <label for="search"><i class="fas fa-search"></i></label>
+        </div>
+        <!-- <div class="filters"> -->
+        <div class="row">
+            <div class="col-md-2">
+                <div class="filter">
+                    <!-- <div class="input-group"> -->
+                    <select class="h-100 py-2" id="designationId" name="DesignationValue"
+                        [(ngModel)]="DesignationValue">
+                        <option value="">Select Designation</option>
+                        <option *ngFor="let item of designationValue" value={{item.designationId}}>
+                            {{item.designationName}}
+                        </option>
+                        <!-- <option value="CEO">CEO</option>
+                        <option value="PM">PM</option>
+                        <option value="TL">TL</option>
+                        <option value="SSE">SSE</option>
+                        <option value="SE">SE</option> -->
+                    </select>
+                    <!-- </div> -->
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="filter ">
+                    <select class="h-100 py-2" id="domainId" name="DomainValue" [(ngModel)]="DomainValue">
+                        <option value="">Select Domain</option>
+                        <option *ngFor="let item of domainValue" value={{item.domainId}}> {{item.domainName}}
+                        </option>
+                        <!-- <option value="IT">Data Science</option>
+                        <option value="medium">AI</option>
+                        <option value="large">Cloud Computing</option>
+                        <option value="large">Cyber Security</option> -->
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="filter">
+                    <select class="h-100 py-2" id="technologyId" name="TechnologyValue" [(ngModel)]="TechnologyValue">
+                        <option value="">Select Technology</option>
+                        <option *ngFor="let item of technologyValue" value={{item.technologyId}}>
+                            {{item.technologyName}}
+                        </option>
+                        <!-- <option value="NET">DotNet</option>
+                        <option value="Java">Java</option>
+                        <option value="Lamp">Lamp</option>
+                        <option value="Lamp">RPA</option> -->
+                    </select>
+
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="filter">
+                    <select class="h-100 py-2" id="collegeId" name="CollegeValue" [(ngModel)]="CollegeValue">
+                        <option value="">Select College</option>
+                        <option *ngFor="let item of collegeValue" value={{item.collegeId}}> {{item.collegeName}}
+                        </option>
+                        <!-- <option value="Krishna">Krishna</option>
+                        <option value="Bannari">Bannari</option>
+                        <option value="Kumaraguru">Kumaraguru</option>
+                        <option value="Kumaraguru">PSNA</option> -->
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="filter ">
+                    <select class="h-100 py-2" name="Min" style="width: 40%">
+                        <option value="Min">Min</option>
+                        <option value="small">1</option>
+                        <option value="medium">2</option>
+                        <option value="large">3</option>
+                        <option value="large">4</option>
+                        <option value="large">5</option>
+                        <option value="large">6</option>
+                        <option value="large">7</option>
+                        <option value="large">8</option>
+                        <option value="large">9</option>
+                        <option value="large">10</option>
+                        <!-- <option value="large">11</option>
+                        <option value="large">12</option>
+                        <option value="large">13</option>
+                        <option value="large">14</option>
+                        <option value="large">15</option>
+                        <option value="large">16</option>
+                        <option value="large">17</option>
+                        <option value="large">18</option>
+                        <option value="large">19</option>
+                        <option value="large">20</option> -->
+
+                    </select>
+                    <select class="h-100 py-2" name="Max" style="width: 40%;">
+                        <option value="Max">Max</option>
+                        <option value="small">1</option>
+                        <option value="medium">2</option>
+                        <option value="large">3</option>
+                        <option value="large">4</option>
+                        <option value="large">5</option>
+                        <option value="large">6</option>
+                        <option value="large">7</option>
+                        <option value="large">8</option>
+                        <option value="large">9</option>
+                        <option value="large">10</option>
+                        <!-- <option value="large">11</option>
+                        <option value="large">12</option>
+                        <option value="large">13</option>
+                        <option value="large">14</option>
+                        <option value="large">15</option>
+                        <option value="large">16</option>
+                        <option value="large">17</option>
+                        <option value="large">18</option>
+                        <option value="large">19</option>
+                        <option value="large">20</option> -->
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="filter">
+                    <select class="h-100 py-2" id="profilestatusId" name="ProfilestatusValue"
+                        [(ngModel)]="ProfilestatusValue">
+                        <option value="">Select Profile Status</option>
+                        <option *ngFor="let item of profilestatusValue" value={{item.profilestatusId}}>
+                            {{item.profilestatusName}}
+                        </option>
+                        <!-- <option value="Approved">Approved</option>
+                        <option value="Rejected">Rejected</option>
+                        <option value="Waiting for Approval">Waiting</option> -->
+                    </select>
+                </div>
+            </div>
+            <!-- <app-adminhome></app-adminhome> -->
+        </div>
+    <!-- </div> -->
+<!-- </div> -->

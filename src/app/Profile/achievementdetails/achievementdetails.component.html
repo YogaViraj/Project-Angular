@@ -1,0 +1,61 @@
+<app-topbar></app-topbar>
+<app-sidebar></app-sidebar>
+<div class="container d-flex justify-content-center table-box">
+  <form action="#" class="form" style="margin-top:110px; width: 60%;border-radius: 15px; border:2px solid black">
+
+    <div class="progressbar">
+      <div class="progress" id="progress"></div>
+
+      <div class="progress-step progress-step-active" data-title="Personal"></div>
+      <div class="progress-step progress-step-active" data-title="Education"></div>
+      <div class="progress-step progress-step-active" data-title="Project"></div>
+      <div class="progress-step progress-step-active" data-title="Skills"></div>
+      <div class="progress-step progress-step-active" data-title="Achievements"></div>
+    </div>
+
+    <div class="form-step form-step-active">
+      <h3>Achievements</h3>
+
+        <label for="percentage">Type</label>
+        <select name="country" id="country" style="border-color: black;">
+          <option value="">Select type of Achievement</option>
+          <option value="">Award</option>
+          <option value="">Certification</option>
+        </select>
+      <br>
+        <!-- <label for="Role">Role Played</label> -->
+        <input type="file" name="Role" id="Role" style="border-color: black;"/>
+      
+      <div class="button">
+        <a href="#" class="btn btn-next width-50 ml-auto">Add</a>
+      </div>
+      <br>
+      <!-- <div class="row">
+        <div class="col">
+          <div class="card card-body">
+            <p class="card-text">Type : Award <br>Image: award.png </p>
+            <h2><a></a><i class="fa-solid fa-trash fa-sm"></i></h2>
+
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-body">
+            <p class="card-text">Type : Award <br>Image: award.png </p>
+            <h2><a></a><i class="fa-solid fa-trash fa-sm"></i></h2>
+
+          </div>
+        </div>
+      </div> -->
+
+
+      <div class="row">
+        <a [routerLink]="['/projectdetails']" class="btn btn-next width-50 ml-auto">Previous</a>
+
+        <a href="#" class="btn btn-next width-50 ml-auto">Save as Draft</a>
+
+        <a [routerLink]="['/viewprofile']" class="btn btn-next width-50 ml-auto">Submit</a>
+
+      </div>
+    </div>
+  </form>
+</div>
